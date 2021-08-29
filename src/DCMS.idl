@@ -1,0 +1,17 @@
+module DCMSApp
+{
+
+interface DCMS
+{
+
+	string createTRecord(in string firstName, in string lastName, in string address, in string phone, in string specialization, in string location, in string manID);
+	string createSRecord(in string firstName, in string lastName, in string courseRegistered, in string status, in string statusDate, in string manID);
+	string getRecordCounts(in string manID);
+	string editRecord(in string recID, in string fieldName, in string newValue, in string manID);
+	string displayAllRecords(in string manID);
+	string displayRecord(in string manID, in string recID);
+	string transferRecord(in string recID, in string toServer, in string manID);
+	oneway void shutdown();
+};
+
+};
